@@ -100,7 +100,7 @@ function main() {
     })
   })
 
-  const port = parseInt(process.env.REACT_APP_PORT) || 8000
+  const port = process.env.PORT || 8000
   const host = process.env.REACT_APP_HOST || 'localhost'
   server.listen(port, () => console.log(`Starting server at ${host}:${port}`))
 }
