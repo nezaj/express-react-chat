@@ -5,7 +5,7 @@ import openSocket from 'socket.io-client'
 import './App.css'
 
 const host = process.env.REACT_APP_HOST
-  ? `${process.env.REACT_APP_HOST}:${process.env.PORT}`
+  ? `${process.env.REACT_APP_HOST}:${process.env.REACT_APP_PORT}`
   : 'http://localhost:8000'
 const socket = openSocket(host)
 

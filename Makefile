@@ -18,9 +18,13 @@ dev-client:
 	@echo "Starting client dev-server..."
 	npm start
 
-server:
+dev-server:
 	@echo "Starting server dev-server..."
 	$(NODEMON) src/server/index.js
+
+prod-server:
+	@echo "Starting server prod-server..."
+	node src/server/index.js
 
 check:
 	$(MAKE) lint
