@@ -9,8 +9,10 @@ const http = require('http')
 const socket = require('socket.io')
 
 function main() {
-  // Initialize app
+  // Initialize app/server/sockets
   const app = express()
+  const server = http.createServer(app)
+  const io = socket.listen(server)
 
   // Configure static directory
   const publicDir = 'build'
@@ -22,9 +24,6 @@ function main() {
     res.sendFile(__dirname, 'index.html')
   })
 
-  // Configure server
-  const server = http.createServer(app)
-  const io = socket(server)
   let handles = new Map()
 
   // Enable cors

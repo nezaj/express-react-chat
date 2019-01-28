@@ -4,7 +4,10 @@ import openSocket from 'socket.io-client'
 
 import './App.css'
 
-const socket = openSocket('https://express-react-chat.herokuapp.com:8000')
+const host = process.env.HEROKU_HOST
+  ? `${process.env.HEROKU_HOST}:${process.env.PORT}`
+  : 'http://localhost:8000'
+const socket = openSocket(host)
 
 function generateHandle() {
   return Math.random()
