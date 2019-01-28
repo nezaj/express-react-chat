@@ -34,7 +34,7 @@ function main() {
 
     /* Listeners */
 
-    // Handle registeration
+    // Handle registration
     client.on('register', data => {
       // Broadcast updated handle lists to all clients
       handles.set(client.id, data.handle)
@@ -98,7 +98,8 @@ function main() {
   })
 
   const port = process.env.PORT || 8000
-  server.listen(port)
+  const host = process.env.HEROKU_HOST || 'localhost'
+  server.listen(port, () => console.log(`Starting server at ${host}:${port}`))
 }
 
 if (require.main === module) {
