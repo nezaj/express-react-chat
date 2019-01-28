@@ -107,6 +107,12 @@ class NameChangeForm extends React.Component {
     this.setState({ handle })
   }
 
+  onEnterPress = e => {
+    if (e.keyCode == 13 && e.shiftKey == false) {
+      this.onSubmit(e)
+    }
+  }
+
   onSubmit = e => {
     e.preventDefault()
     const { handle } = this.state
@@ -122,6 +128,7 @@ class NameChangeForm extends React.Component {
           type="text"
           className="name-change-input"
           onChange={this.onChange}
+          onKeyDown={this.onEnterPress}
           value={handle}
         />
         <button className="name-change-button" onClick={this.onSubmit}>
