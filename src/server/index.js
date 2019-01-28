@@ -98,7 +98,7 @@ function main() {
   })
 
   const port = process.env.PORT || 8000
-  const host = process.env.HEROKU_HOST || 'localhost'
+  const host = process.env.REACT_APP_HOST || 'localhost'
   server.listen(port, () => console.log(`Starting server at ${host}:${port}`))
 }
 
