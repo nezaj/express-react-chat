@@ -1,12 +1,14 @@
 /* eslint no-console: 0 */
 import React, { Component } from 'react'
-import openSocket from 'socket.io-client'
+import io from 'socket.io-client'
 
 import './App.css'
 
-const socket = process.env.REACT_APP_HOST
-  ? openSocket()
-  : openSocket('http://localhost:8000')
+// If we are running in Heroku we don't specify the host so then
+// the client will just connect to whatever port the web page was loaded
+// from (automatically use the same origin) which is what we want
+// Thanks: https://stackoverflow.com/a/30117834
+const socket = process.env.REACT_APP_HOST ? io() : io('http://localhost:8000')
 
 function generateHandle() {
   return Math.random()

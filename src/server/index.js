@@ -49,6 +49,8 @@ function main() {
       io.sockets.emit('new_message', {
         content: `${data.handle} joined the chat`,
       })
+
+      console.log(`registered ${client.id} handle ${data.handle}`)
     })
 
     // Handle disconnections
@@ -66,7 +68,7 @@ function main() {
         handles: Array.from(handles.values()),
       })
 
-      console.log(client.id, 'disconnected')
+      console.log(`client ${client.id} with handle ${handle} disconnected`)
     })
 
     // Handle new messages
@@ -75,6 +77,10 @@ function main() {
         type: 'chat',
         content: `${data.handle}: ${data.message}`,
       })
+
+      console.log(
+        `new message from client ${client.id} with handle ${data.handle}`
+      )
     })
 
     // Handle name changes
@@ -97,6 +103,10 @@ function main() {
       io.sockets.emit('update_handles', {
         handles: Array.from(handles.values()),
       })
+
+      console.log(
+        `client ${client.id} changed handle from ${oldHandle} to ${newHandle}`
+      )
     })
   })
 
