@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  overflow: scroll;
+  width: 80%;
+}
+
+.name-change-form {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.name-change-input {
+  border: 1px solid black;
+  font-size: 0.8rem;
+  margin-right: 10px;
+  outline: none;
+  padding: 10px 20px;
+}
+
+.name-change-button {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: center;
+  outline: none;
+  padding: 10px 20px;
+}
+
+.name-change-button:hover {
+  background-color: lightGrey;
+  cursor: pointer;
+}
+
+.title {
+  align-items: center;
+  background-color: blue;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  height: 3em;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+}
+
+.message-list {
+  border-radius: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  min-height: 50vh;
+  overflow: scroll;
+  padding: 10px;
+  width: 60%;
+}
+
+.users-list {
+  border-radius: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+  overflow: scroll;
+  padding: 10px;
+  width: 40%;
+}
+
+.users-header {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0px;
+}
+
+.users {
+  margin-left: 5px;
+}
+
+.send-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.send-input {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  font-size: 1.5em;
+  justify-content: center;
+  outline: none;
+  padding: 10px;
+}
+
+.send-input:hover {
+  cursor: pointer;
+}
+
+.send-button {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  font-size: 1.5em;
+  height: 2em;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  outline: none;
+  padding: 10px 20px;
+}
+
+.send-button:hover {
+  background-color: lightGrey;
+  cursor: pointer;
+}
