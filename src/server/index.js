@@ -1,6 +1,8 @@
 /* eslint no-console: 0 */
 /* Entry-point for our express server */
 
+const path = require('path')
+
 const program = require('commander')
 const express = require('express')
 const http = require('http')
@@ -9,6 +11,18 @@ const socket = require('socket.io')
 function main() {
   // Initialize app
   const app = express()
+
+  // Configure static directory
+  const publicDir = 'build'
+  const staticDir = path.join(__dirname, '..', '..', publicDir)
+  app.use(express.static(staticDir))
+
+  // Make all routes serve index.html so our front-end app can take over
+  app.get('/*', function(req, res) {
+    res.sendFile(__dirname, 'index.html')
+  })
+
+  // Configure server
   const server = http.createServer(app)
   const io = socket(server)
   let handles = new Map()

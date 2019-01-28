@@ -1,5 +1,5 @@
 # Express React Chat
-Simple chat app made w/ Express/React/SocketIO. Fun exercise for exploring websockets
+Simple chat app made w/ Express/React/SocketIO. Fun exercise for exploring websockets. [See it live][express-react-chat]
 
 ## Table of Contents
 * [Quickstart](#quickstart)
