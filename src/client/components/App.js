@@ -170,6 +170,12 @@ class SendForm extends React.Component {
     this.setState({ message })
   }
 
+  onEnterPress = e => {
+    if (e.keyCode == 13 && e.shiftKey == false) {
+      this.send(e)
+    }
+  }
+
   send = e => {
     e.preventDefault()
     const { onSend } = this.props
@@ -187,6 +193,7 @@ class SendForm extends React.Component {
           className="send-input"
           placeholder="Type something in..."
           onChange={this.onChange}
+          onKeyDown={this.onEnterPress}
           value={message}
         />
         <button className="send-button" onClick={this.send}>
