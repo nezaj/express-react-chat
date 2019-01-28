@@ -1,5 +1,5 @@
-# Dunbario
-Personal CRM for your community! See it [live][dunbario]
+# Express React Chat
+Simple chat app made w/ Express/React/SocketIO. Fun exercise for exploring websockets
 
 ## Table of Contents
 * [Quickstart](#quickstart)
@@ -8,10 +8,10 @@ Personal CRM for your community! See it [live][dunbario]
 
 ## Quickstart
 ```
-git clone https://github.com/nezaj/dunbario
-cd dunbario
+git clone https://github.com/nezaj/express-react-chat
+cd express-react-chat
 npm install
-make dev-server // Start express server
+make server // Start express server
 make dev-client // Start create-react-app (webpack) server
 open http://localhost:3000
 ```
@@ -34,4 +34,4 @@ Currently deploying to heroku
 make deploy
 ```
 
-[dunbario]: https://dunbario.herokuapp.com/
+[express-react-chat]: https://express-react-chat.herokuapp.com/
